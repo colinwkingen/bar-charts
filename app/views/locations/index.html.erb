@@ -4,7 +4,7 @@
     <h4><%= location.address %></h4>
     <hr>
     <% location.charts.each do |chart| %>
-      <h5><%= chart.name %></h5>
+      <h5><%= chart.name %> Score: <%= chart.score %></h5>
     <% end %>
   </div>
 <% end %>
