@@ -10,6 +10,6 @@ Location.create(name: 'Angelos', address: '47th and Hawthorne')
 
 Location.create(name: 'The Space Room', address: '48th and Hawthorne')
 
-Location.create(name: 'The Water Trough', address: '48th and Hawthorn')
+Location.create(name: 'The Water Trough', address: '48th and Hawthorne')
 
-Location.create(name: 'The Hideaway', address: '21st and Hawthorn')
+Location.create(name: 'The Hideaway', address: '21st and Hawthorne')

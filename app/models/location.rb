@@ -7,11 +7,11 @@ class Location < ActiveRecord::Base
   after_create :build_charts
 
   def build_charts
-    self.charts.create(name: 'Food')
-    self.charts.create(name: 'Drinks')
-    self.charts.create(name: 'Price')
-    self.charts.create(name: 'Atmosphere')
-    self.charts.create(name: 'Cleanliness')
+    self.charts.create(name: 'Food', score: '1')
+    self.charts.create(name: 'Drinks', score: '1')
+    self.charts.create(name: 'Price', score: '1')
+    self.charts.create(name: 'Atmosphere', score: '1')
+    self.charts.create(name: 'Cleanliness', score: '1')
   end
 
 end
