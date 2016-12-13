@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161213053134) do
+ActiveRecord::Schema.define(version: 20161213071633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "charts", force: :cascade do |t|
     t.string "location_id"
+    t.string "name"
+    t.float  "score"
   end
 
   create_table "locations", force: :cascade do |t|
