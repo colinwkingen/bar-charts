@@ -1,1 +1,6 @@
-<h1>Here's a basic page.</h1>
+<% @locations.each do |location| %>
+  <div class="col-md-5">
+    <h3><%= location.name %></h3>
+    <h4><%= location.address %></h4>
+  </div>
+<% end %>
