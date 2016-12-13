@@ -9,6 +9,26 @@
   </head>
 
   <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <%= link_to "BarCharts", root_path, class: 'navbar-brand' %>
+        </div>
+        <ul class="nav navbar-nav">
+
+        </ul>
+          <div>
+            <p class="navbar-text navbar-center nav_user">
+              <%= flash[:success] %>
+              <%= flash[:failure] %>
+              <%= flash[:notice] %>
+              <%= flash[:alert] %>
+            </p>
+          </div>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
