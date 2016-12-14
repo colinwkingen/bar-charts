@@ -1,2 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+.single_tick {
+  background-color: black;
+  color: black;
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  margin: 3px; 
+}

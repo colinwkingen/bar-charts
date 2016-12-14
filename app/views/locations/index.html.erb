@@ -1,10 +1,12 @@
 <% @locations.each do |location| %>
-  <div class="col-md-5">
-    <h3><%= location.name %></h3>
-    <h4><%= location.address %></h4>
-    <hr>
-    <% location.charts.each do |chart| %>
-      <h5><%= chart.name %> Score: <%= chart.score %></h5>
-    <% end %>
-  </div>
+  <%= link_to location_charts_path(location) do %>
+    <div class="col-md-5">
+      <h3><%= location.name %></h3>
+      <h4><%= location.address %></h4>
+      <hr>
+      <% location.charts.each do |chart| %>
+        <h5><%= chart.name %> Score: <%= chart.score %></h5>
+      <% end %>
+    </div>
+  <% end %>
 <% end %>

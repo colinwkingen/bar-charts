@@ -1,0 +1,9 @@
+<h1>Stats for <%= @location.name %> </h1>
+<h2><%= @location.address %></h2>
+<% @charts.each do |chart| %>
+  <div class="col-md-5">
+    <h3><%= chart.name %>:</h3>
+    <hr>
+    <p>Rating: <%= chart.score_ticks %></p>
+  </div>
+<% end %>
