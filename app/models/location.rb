@@ -4,6 +4,9 @@ class Location < ActiveRecord::Base
   validates :address, :presence => true
   validates :name, :presence => true
 
+  geocoded_by :address
+  after_validation :geocode
+
   after_create :build_charts
 
   def build_charts
