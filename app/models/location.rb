@@ -21,4 +21,12 @@ class Location < ActiveRecord::Base
     self.address
   end
 
+  def scores
+    score_arr = []
+    self.charts.each do |chart|
+      score_arr.push(chart.score)
+    end
+    score_arr
+  end
+
 end

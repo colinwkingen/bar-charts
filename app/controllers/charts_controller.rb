@@ -9,6 +9,11 @@ class ChartsController < ApplicationController
   def index
     @location = Location.find(params[:location_id])
     @charts = @location.charts
-    render :index
+    respond_to do |format|
+      format.html
+      format.json { render json: @location.scores }
+      format.js
+    end
   end
+
 end
