@@ -17,4 +17,8 @@ class Location < ActiveRecord::Base
     self.charts.create(name: 'Cleanliness', score: 1.0)
   end
 
+  def geo_address
+    [self.latitude,self.longitude]
+  end
+
 end

@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Location.create(name: 'Angelo&rsquo;s', address: '47th and Hawthorne')
+Location.create(name: "Angelo's", address: 'SE 47th and Hawthorne, Portland, OR')
 
-Location.create(name: 'The Space Room', address: '48th and Hawthorne')
+Location.create(name: 'The Space Room', address: 'SE+48th+and+Hawthorne,+Portland, +OR')
 
-Location.create(name: 'The Water Trough', address: '48th and Hawthorne')
+Location.create(name: 'The Water Trough', address: '4825 N Lombard St, Portland, OR')
 
-Location.create(name: 'The Hideaway', address: '21st and Hawthorne')
+Location.create(name: 'The Hideaway', address: 'The Hawthorne Hidaway')
