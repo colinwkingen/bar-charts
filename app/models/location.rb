@@ -4,8 +4,8 @@ class Location < ActiveRecord::Base
   validates :address, :presence => true
   validates :name, :presence => true
 
-  geocoded_by :address
-  after_validation :geocode
+  geocoded_by :geo_address
+  after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
 
   after_create :build_charts
 
@@ -18,7 +18,7 @@ class Location < ActiveRecord::Base
   end
 
   def geo_address
-    [self.latitude,self.longitude]
+    self.address
   end
 
 end

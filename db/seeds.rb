@@ -10,6 +10,6 @@ Location.create(name: "Angelo's", address: 'SE 47th and Hawthorne, Portland, OR'
 
 Location.create(name: 'The Space Room', address: 'SE+48th+and+Hawthorne,+Portland, +OR')
 
-Location.create(name: 'The Water Trough', address: '4825 N Lombard St, Portland, OR')
+Location.create(name: 'The Water Trough', address: '4825 N Lombard St, Portland, OR, USA')
 
-Location.create(name: 'The Hideaway', address: 'The Hawthorne Hidaway')
+Location.create(name: 'The Hideaway', address: 'SE 21st and Hawthorne, Portland, OR, USA')
