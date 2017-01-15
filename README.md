@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* I want to be able to rate various bars on stats like cleanliness and food
 
-Things you may want to cover:
+* I want some of the ratings to be on things that are neither bad nor good, like fanciness
 
-* Ruby version
+* I want to avoid any kind of commenting or specific user accountability
 
-* System dependencies
+* I want each user to only be able to rate a certain bars stats once
 
-* Configuration
+* I want to be able to change my rating
 
-* Database creation
+* I want no chart to be displayed for a characteristic until it has been rated several times
 
-* Database initialization
+* I want to be able to search for local bars by zip code (Google API)
 
-* How to run the test suite
+* I want to be able to search for a particular bar by name
 
-* Services (job queues, cache servers, search engines, etc.)
+* I want to see the average ratings of bars by number and graphically
 
-* Deployment instructions
-
-* ...
+* I want to be required to log in to rate bars

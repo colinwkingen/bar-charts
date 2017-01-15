@@ -6,6 +6,16 @@
     <h3><%= chart.name %>:</h3>
     <br>
     <p>Rating: <%= chart.score_ticks %></p>
+    <p>Votes: <%= chart.votes %></p>
+    <p>Score: <%= chart.score %></p>
+    <%= flash[:success] %>
+
+    <%= form_for [ @location, chart ], remote: true do |f| %>
+      <%= f.hidden_field :votes, value: 1 %>
+      <%= f.range_field :score, :min=>1, :max=>10, :class=>"slide", :id=>"slider1" + chart.id.to_s %>
+      <%= f.submit 'Rate Now', class: "btn btn-default", :data => { :method => 'patch'} %>
+    <% end %>
+
   </div>
 <% end %>
 
