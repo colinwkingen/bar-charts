@@ -1,1 +1,5 @@
-$('.map_back').toggle();
+$('.chart-pane').page();
+
+$('.u_ticks').html(<%= @chart.score_ticks %>);
+$('.u_votes').html("<%= @chart.votes %>");
+$('.u_score').html("<%= @chart.score %>");

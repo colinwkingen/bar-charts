@@ -2,14 +2,15 @@
 <h1>Stats for <%= @location.name %> </h1>
 <h2><%= @location.address %></h2>
 <% @charts.each do |chart| %>
-  <div class="col-md-3 chart-pane">
-    <h3><%= chart.name %>:</h3>
-    <br>
-    <p>Rating: <%= chart.score_ticks %></p>
-    <p>Votes: <%= chart.votes %></p>
-    <p>Score: <%= chart.score %></p>
-    <%= flash[:success] %>
-
+  <div class="col-md-3 chart-pane<%= chart.id %>">
+    <div class="chart-stats<%= chart.id %>">
+      <h3><%= chart.name %>:</h3>
+      <br>
+      <p class="u_ticks">Rating: <%= chart.score_ticks %></p>
+      <p class="u_votes">Votes: <%= chart.votes %></p>
+      <p class="u_score">Score: <%= chart.score %></p>
+      <%= flash[:success] %>
+    </div>
     <%= form_for [ @location, chart ], remote: true do |f| %>
       <%= f.hidden_field :votes, value: 1 %>
       <%= f.range_field :score, :min=>1, :max=>10, :class=>"slide", :id=>"slider1" + chart.id.to_s %>

@@ -20,15 +20,20 @@ class ChartsController < ApplicationController
     # byebug
     @location = Location.find(params[:location_id])
     @chart = @location.charts.find(params[:id])
+    @chart.increment(params[:chart])
     flash[:success] = "Ping!"
-    if @chart.update({votes: 1})
+    if @chart.update chart_params
       respond_to do |format|
         format.html { redirect_to location_charts_path(@chart.location) }
         format.js
       end
     else
-      render :edit
+      render :index
     end
+  end
+
+  def chart_params
+    params.require(:chart).permit(:score,:votes)
   end
 
 end

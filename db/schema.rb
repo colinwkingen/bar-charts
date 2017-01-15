@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 20170114005532) do
   create_table "charts", force: :cascade do |t|
     t.string  "location_id"
     t.string  "name"
-    t.float   "score"
-    t.integer "votes"
+    t.float   "score", default: 0, null: false
+    t.integer "votes", default: 0, null: false
   end
 
   create_table "locations", force: :cascade do |t|

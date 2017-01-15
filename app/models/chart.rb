@@ -12,4 +12,9 @@ class Chart < ActiveRecord::Base
     end
     return str.html_safe
   end
+
+  def increment(chart)
+    self.score += chart[:score].to_i
+    self.votes += 1
+  end
 end
